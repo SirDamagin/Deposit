@@ -88,7 +88,7 @@ p
 
     padding: 15px 30px 15px 30px;
 
-    transition: border 0.3s,background-color 0.3s,color 0.3s,transform 1.5s cubic-bezier(1, 0, 0, 1);
+    transition: border 0.3s,background-color 0.3s,color 0.3s,opacity 1s;
 }
 .startButton:hover
 {
@@ -98,7 +98,10 @@ p
 }
 .buttonAway
 {
-    transform: translateX(-3000px);
+    opacity: 0;
+    border: white;
+    background-color: white;
+    color: #5b63b7;
 }
 
 .decoration
@@ -167,4 +170,5 @@ p
     {
         transform: translateY(0px);
     }
+
 }
