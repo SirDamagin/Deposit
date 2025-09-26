@@ -1,0 +1,173 @@
+body
+{
+    position:relative;
+    margin:0;
+    background-color: #cbccff;
+    height: 90vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+p
+{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin:0;
+}
+
+.top-text
+{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-weight: bold;
+    color: #5b63b7;
+    transform:translateX(-2000px);
+}
+.topTextMoving
+{
+    animation-name: movein;
+    animation-duration: 1s;
+    animation-timing-function:cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    /* MANTIENE LO STATO FINALE */
+}
+.mid-text
+{
+    margin-top: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #5b63b7;
+    transform:translateX(-2000px);
+}
+.midTextMoving
+{
+    animation-name: movein2;
+    animation-duration: 1s;
+    animation-timing-function:cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation-delay: 1.3s;
+    animation-fill-mode: forwards;
+}
+.site-box
+{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    height: 70%;
+    width: 400px;
+    margin: 20px 0 0 0;
+    padding: 20px 20px 20px 20px;
+    border-radius: 20px;
+    transform: scaleX(0%);
+    transform: scaleY(0%);
+    z-index: 2;
+}
+.siteBoxMoving
+{
+    animation-name: boxgrow;
+    animation-duration: 1.5s;
+    animation-delay: 1.5s;
+    animation-timing-function: cubic-bezier(1, 0, 0, 1);
+    animation-fill-mode: forwards;
+}
+
+.startButton
+{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    
+    background-color: #5b63b7;
+    color: white;
+    font-size:26px;
+    border: #5b63b7;
+    border-radius: 15px;
+    z-index: 1;
+
+    padding: 15px 30px 15px 30px;
+
+    transition: border 0.3s,background-color 0.3s,color 0.3s,opacity 1s;
+}
+.startButton:hover
+{
+    border: white;
+    background-color: white;
+    color: #5b63b7;
+}
+.buttonAway
+{
+    opacity: 0;
+    border: white;
+    background-color: white;
+    color: #5b63b7;
+}
+
+.decoration
+{
+    position:absolute;
+    width:1000px;
+    height:1000px;
+
+    transform: translateY(-2000px);
+}
+.circle
+{
+    fill:#5b63b7;
+}
+.rectangle
+{
+    fill:#cbccffd0;
+}
+.decorationDropping
+{
+    animation-name: drop;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(1, 0, 0, 1);
+}
+
+@keyframes movein
+{
+    0%
+    {
+
+    }
+    100%
+    {
+        transform:translateX(0px)
+    }
+}
+@keyframes movein2
+{
+    0%
+    {
+        transform:translateX(2000px)
+    }
+    100%
+    {
+        transform:translateX(0px)
+    }
+}
+@keyframes boxgrow
+{
+    0%
+    {
+
+    }
+    100%
+    {
+        transform: scaleY(100%);
+    }
+}
+@keyframes drop
+{
+    0%{}
+
+    100%
+    {
+        transform: translateY(0px);
+    }
+}
